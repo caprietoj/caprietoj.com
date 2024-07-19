@@ -1,0 +1,46 @@
+/* Estilos generales */
+
+body {
+    padding-top: 70px; /* Para compensar la altura del navbar fijo */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .navbar {
+    transition: top 0.3s;
+  }
+  
+  .card {
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Animación del fénix */
+  
+  @keyframes fly {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  #phenix {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    animation: fly 10s linear infinite alternate;
+    pointer-events: none; /* Evita que el fénix afecte los clics */
+  }
+  
+  /* Estilos específicos para dispositivos pequeños */
+  
+  @media (max-width: 768px) {
+    body {
+      padding-top: 56px;
+    }
+  }
+  
